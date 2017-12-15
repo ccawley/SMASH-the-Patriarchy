@@ -18,6 +18,7 @@ h1 {
   color: gainsboro;
   font-size: 9em;
   margin-bottom: 0;
+  text-align: center;
 }
 
 p {
@@ -35,4 +36,19 @@ p {
 img {
   border: 25px solid gainsboro;
   border-radius: 30px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  p {
+    font-size: 2em;
+    width: 80%;
+  }
+
+  img {
+    width: 80%
+  }
 }
