@@ -1,0 +1,38 @@
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  align-items: center;
+  background-color: #da4167;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+html {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 10px;
+}
+
+h1 {
+  color: gainsboro;
+  font-size: 9em;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  width: 55%;
+}
+
+.soon {
+  margin-top: 0;
+}
+
+img {
+  border: 25px solid gainsboro;
+  border-radius: 30px;
+}
