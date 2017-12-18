@@ -1,12 +1,15 @@
 body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  align-items: center;
   background-color: #da4167;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+
+main {
+  border: 1px solid black;
 }
 
 html {
@@ -15,47 +18,21 @@ html {
 }
 
 h1 {
-  color: gainsboro;
-  font-size: 9em;
-  margin-bottom: 0;
-  text-align: center;
+  font-size: 5em;
 }
 
-p {
+row {
+  display: flex;
+}
+
+.square {
+  background-color: white;
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+}
+
+button {
   font-size: 2em;
-  font-weight: bold;
-  line-height: 1.5;
-  text-align: center;
-  width: 55%;
-}
-
-.soon {
-  margin-top: 0;
-}
-
-img {
-  border: 25px solid gainsboro;
-  border-radius: 30px;
-}
-
-@media (max-width: 1000px) {
-  h1 {
-    font-size: 5em;
-  }
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 3em;
-  }
-
-  p {
-    font-size: 2em;
-    width: 80%;
-  }
-
-  img {
-    margin-bottom: 30px;
-    width: 80%;
-  }
+  margin-top: 10px;
 }
