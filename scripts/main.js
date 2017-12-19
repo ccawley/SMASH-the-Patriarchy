@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   let patriarch2 = [`url("../images/rose.jpg")`, `url("../images/franken.jpg")`, `url("../images/ratner.jpg")`, `url("../images/dick.jpg")`, `url("../images/bush.jpg")`, `url("../images/allen.jpg")`, `url("../images/ck.jpg")`, `url("../images/levine.jpg")`, `url("../images/hite.jpg")`, `url("../images/franks.jpg")`, `url("../images/nassar.jpg")`, `url("../images/blatter.jpg")`, `url("../images/savino.jpg")`, `url("../images/affleck.jpg")`, `url("../images/affleckc.jpg")`]
 
-  let goodThings = [`url("../images/puffer.jpg")`, `url("../scarecrow.jpg")`,  `url("../images/cat.jpg")`, `url("../images/fish.jpg")`, `url("../images/troll.jpg")`, `url("../images/rabbit.jpg")`, `url("../images/lion.jpg")`, `url("../images/pokemon.jpg")`, `url("../images/owl.jpg")`, `url("../images/bird.jpg")`, `url("../images/sloth.jpg")`, `url("../images/corn.jpg")`, `url("../images/dog.jpg")`, `url("../images/puppy.jpg")`, `url("../images/caterpillar.jpg")`, `url("../images/biff.jpg")`, `url("../images/sushi.jpg")`, `url("../images/hampster.jpg")`, `url("../images/pumpkin.jpg")`, `url("../images/baby.jpg")`]
+  let goodThings = [`url("../images/puffer.jpg")`, `url("../images/scarecrow.jpg")`,  `url("../images/cat.jpg")`, `url("../images/fish.jpg")`, `url("../images/troll.jpg")`, `url("../images/rabbit.jpg")`, `url("../images/lion.jpg")`, `url("../images/pokemon.jpg")`, `url("../images/owl.jpg")`, `url("../images/bird.jpg")`, `url("../images/sloth.jpg")`, `url("../images/corn.jpg")`, `url("../images/dog.jpg")`, `url("../images/puppy.jpg")`, `url("../images/caterpillar.jpg")`, `url("../images/biff.jpg")`, `url("../images/sushi.jpg")`, `url("../images/hampster.jpg")`, `url("../images/pumpkin.jpg")`, `url("../images/baby.jpg")`]
 
   // Creates a node list of all game squares (36 total)
   let squares = document.querySelectorAll(".square")
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
     return result
   }
 
+  // Shuffles my arrays so that each game the pics are in random order
   function shuffle(arr) {
     let i = 0, j = 0, temp = null
 
@@ -34,19 +35,20 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   }
 
+  // Calling my shuffle algorithm on my picture arrays
   shuffle(patriarch1)
   shuffle(patriarch2)
   shuffle(goodThings)
 
-  // Selects a random square to be the "active" square
+  // Selects a random square to be the "active" square for loop1
   function randomSquare1() {
     selected1 = squares[randomNum()]
   }
-  // Selects a random square to be the "active" square
+  // Selects a random square to be the "active" square for loop2
   function randomSquare2() {
     selected2 = squares[randomNum()]
   }
-  // Selects a random square to be the "active" square
+  // Selects a random square to be the "active" square for loop3
   function randomSquare3() {
     selected3 = squares[randomNum()]
   }
@@ -54,14 +56,14 @@ document.addEventListener('DOMContentLoaded', function(){
   // Button that starts the game loop
   goBtn.addEventListener("click", function() {
     // Counter for each loop, all stop after 30 seconds
-    let counter1 = -1
-    let counter2 = -1
-    let counter3 = -1
+    let counter1 = 0
+    let counter2 = 0
+    let counter3 = 0
     let score = 0
     timerDisplay.innerText = 30
 
-    loop1 = setInterval(function () {
-      counter1 += 1
+    loop1 = setInterval(function() {
+      counter1++
       timerDisplay.innerText--
       if (counter1 === 30) {
         clearInterval(loop1)
@@ -74,19 +76,22 @@ document.addEventListener('DOMContentLoaded', function(){
 
       selected1.style.background = patriarch1[counter1]
 
-      selected1.addEventListener("click", function () {
+      function click1() {
         score++
         scoreDisplay.innerText = score
-      })
+      }
 
-      clearSquare = setTimeout(function () {
-        selected1.style.background =
+      selected1.addEventListener("click", click1)
+
+      clearSquare = setTimeout(function() {
+        selected1.style.background = ""
         selected1.style.backgroundColor = "white"
-      }, 1400)
+        selected1.removeEventListener('click', click1)
+      }, 1200)
 
     }, 1500)
 
-    loop2 = setInterval(function () {
+    loop2 = setInterval(function() {
       counter2++
       if (counter2 === 20) {
         clearInterval(loop2)
@@ -98,20 +103,23 @@ document.addEventListener('DOMContentLoaded', function(){
       }
       selected2.style.background = goodThings[counter2]
 
-      selected2.addEventListener("click", function () {
+      function click2() {
         score--
         scoreDisplay.innerText = score
-      })
+      }
 
-      clearSquare = setTimeout(function () {
-        selected2.style.background =
+      selected2.addEventListener("click", click2)
+
+      clearSquare = setTimeout(function() {
+        selected2.style.background = ""
         selected2.style.backgroundColor = "white"
-      }, 1500)
+        selected2.removeEventListener("click", click2)
+      }, 1200)
 
     }, 2000)
 
-    loop3 = setInterval(function () {
-      counter3 += 1
+    loop3 = setInterval(function() {
+      counter3++
       if (counter3 === 15) {
         clearInterval(loop3)
       }
@@ -122,15 +130,18 @@ document.addEventListener('DOMContentLoaded', function(){
       }
       selected3.style.backgroundColor = patriarch2[counter3]
 
-      selected3.addEventListener("click", function () {
+      function click3() {
         score++
         scoreDisplay.innerText = score
-      })
+      }
 
-      clearSquare = setTimeout(function () {
-        selected3.style.background =
+      selected3.addEventListener("click", click3)
+
+      clearSquare = setTimeout(function() {
+        selected3.style.background = ""
         selected3.style.backgroundColor = "white"
-      }, 1500)
+        selected3.removeEventListener("click", click3)
+      }, 1200)
 
     }, 3000)
 
