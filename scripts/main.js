@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function(){
     selected3 = squares[randomNum()]
   }
 
+  alert("If you are on a mobile device, please rotate it to landscape for the best experience. Thank you!")
+
   // Button that starts the game loop
   goBtn.addEventListener("click", function() {
     // Counter for each loop, all stop after 30 seconds
