@@ -1,15 +1,20 @@
 body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  background-color: #da4167;
+  align-items: center;
+  background: url("../images/pawel-janiak-197471.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 main {
   border: 1px solid black;
+  cursor: url('../images/hammer.png'), auto;
 }
 
 html {
@@ -18,7 +23,10 @@ html {
 }
 
 h1 {
-  font-size: 5em;
+  font-family: 'Concert One', cursive;
+  font-size: 8em;
+  text-align: center;
+  margin: 10px 0 15px 0;
 }
 
 row {
@@ -26,17 +34,36 @@ row {
 }
 
 .square {
-  background-color: white;
+  background-color: gainsboro;
   border: 1px solid black;
   height: 100px;
   width: 100px;
 }
 
 button {
-  font-size: 2em;
+  font-family: 'Concert One', cursive;
+  font-size: 16px;
+  font-weight: bold;
   margin-top: 10px;
+  opacity: .9;
 }
 
 p {
-  font-size: 2em;
+  background-color: gainsboro;
+  border-radius: 5px;
+  font-family: 'Amiko', sans-serif;
+  font-size: 15px;
+  padding: 5px;
+}
+
+@media (max-width: 600px) {
+ h1 {
+   font-size: 3em;
+   margin-bottom: 15px;
+ }
+
+ .square {
+   height: 50px;
+   width: 50px;
+ }
 }

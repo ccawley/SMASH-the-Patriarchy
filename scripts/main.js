@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
       clearSquare = setTimeout(function() {
         selected1.style.background = ""
-        selected1.style.backgroundColor = "white"
+        selected1.style.backgroundColor = "gainsboro"
         selected1.removeEventListener('click', click1)
       }, 1200)
 
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function(){
       selected2.style.background = goodThings[counter2]
 
       function click2() {
-        score--
+        score -= 2
         scoreDisplay.innerText = score
       }
 
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
       clearSquare = setTimeout(function() {
         selected2.style.background = ""
-        selected2.style.backgroundColor = "white"
+        selected2.style.backgroundColor = "gainsboro"
         selected2.removeEventListener("click", click2)
       }, 1200)
 
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
       clearSquare = setTimeout(function() {
         selected3.style.background = ""
-        selected3.style.backgroundColor = "white"
+        selected3.style.backgroundColor = "gainsboro"
         selected3.removeEventListener("click", click3)
       }, 1200)
 
