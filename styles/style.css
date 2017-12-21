@@ -12,13 +12,18 @@ body {
   flex-direction: column;
 }
 
+html {
+  font-size: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
 main {
   border: 1px solid black;
   cursor: url('../images/hammer.png'), auto;
-}
-
-html {
-  font-size: 10px;
 }
 
 h1 {
@@ -26,6 +31,14 @@ h1 {
   font-size: 8em;
   text-align: center;
   margin: 10px 0 15px 0;
+}
+
+.background {
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px 0;
+  opacity: .9;
+  padding: 10px;
 }
 
 row {
@@ -39,6 +52,14 @@ row {
   width: 100px;
 }
 
+.instructions {
+  font-family: 'Concert One', cursive;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  opacity: .9;
+}
+
 button {
   font-family: 'Concert One', cursive;
   font-size: 16px;
@@ -48,16 +69,19 @@ button {
 }
 
 p {
-  background-color: gainsboro;
   border-radius: 5px;
   font-family: 'Amiko', sans-serif;
   font-size: 15px;
   padding: 5px;
 }
 
+.display {
+  background-color: gainsboro;
+}
+
 @media (max-width: 600px) {
   h1 {
-    font-size: 1em;
+    font-size: 3em;
     margin-bottom: 15px;
   }
 

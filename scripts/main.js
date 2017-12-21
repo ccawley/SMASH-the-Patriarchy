@@ -125,6 +125,9 @@ document.addEventListener('DOMContentLoaded', function(){
       if (counter3 === 15) {
         clearInterval(loop3)
       }
+      if (counter3 === 15) {
+        window.location.href = "index3.html"
+      }
 
       randomSquare3()
       if (selected3 === selected1 || selected3 === selected2) {
@@ -143,10 +146,6 @@ document.addEventListener('DOMContentLoaded', function(){
         selected3.style.background = ""
         selected3.style.backgroundColor = "gainsboro"
         selected3.removeEventListener("click", click3)
-
-        if (counter3 === 15) {
-          window.location.href = "https://www.google.com"
-        }
       }, 1200)
 
     }, 3000)

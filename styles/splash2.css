@@ -1,0 +1,65 @@
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: url("../images/paul-morris-215023.jpg") center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+html {
+  font-size: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+h1 {
+  font-family: 'Concert One', cursive;
+  font-size: 8em;
+  text-align: center;
+  margin: 10px 0 15px 0;
+}
+
+.background {
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  opacity: .9;
+  padding: 10px;
+}
+
+p {
+  font-family: 'Amiko', sans-serif;
+  font-size: 15px;
+}
+
+.charities {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary {
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+ h1 {
+   font-size: 5em;
+   margin-bottom: 15px;
+ }
+
+ .background {
+   margin: 5px;
+ }
+
+ .btn-primary {
+   margin: 3px;
+ }
+}
