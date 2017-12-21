@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function(){
         clearInterval(loop3)
       }
       if (counter3 === 15) {
+        localStorage.setItem('score', JSON.stringify(score))
         window.location.href = "index3.html"
       }
 
