@@ -63,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function(){
     let counter3 = 0
     let score = 0
     timerDisplay.innerText = 30
+    var punch = document.createElement('audio')
+    punch.setAttribute('src', "punch_or_whack.wav")
 
     loop1 = setInterval(function() {
       counter1++
@@ -79,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function(){
       selected1.style.background = patriarch1[counter1]
 
       function click1() {
+        punch.play()
         score++
         scoreDisplay.innerText = score
       }
@@ -137,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function(){
       selected3.style.backgroundColor = patriarch2[counter3]
 
       function click3() {
+        punch.play()
         score++
         scoreDisplay.innerText = score
       }
