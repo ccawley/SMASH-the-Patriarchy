@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
     $(".bckgrnd").click(function(){
       $("section").toggle(1000)
-      })
-
     })
+
+  })
 
 })

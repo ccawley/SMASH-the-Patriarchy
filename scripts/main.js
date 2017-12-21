@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // Creates an object for the "SMASH!" (go) button
   let goBtn = document.querySelector(".goBtn")
   // Creates an object for the score display
-  let scoreDisplay = document.querySelector(".score")
+  var scoreDisplay = document.querySelector(".score")
   let timerDisplay = document.querySelector(".timer")
   // Variables to hold onto the randomly selected squares during the game loop
   let selected1
