@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   let goodThings = [`url("../images/puffer.jpg")`, `url("../images/scarecrow.jpg")`,  `url("../images/cat.jpg")`, `url("../images/fish.jpg")`, `url("../images/troll.jpg")`, `url("../images/rabbit.jpg")`, `url("../images/lion.jpg")`, `url("../images/pokemon.jpg")`, `url("../images/owl.jpg")`, `url("../images/bird.jpg")`, `url("../images/sloth.jpg")`, `url("../images/corn.jpg")`, `url("../images/dog.jpg")`, `url("../images/puppy.jpg")`, `url("../images/caterpillar.jpg")`, `url("../images/biff.jpg")`, `url("../images/sushi.jpg")`, `url("../images/hampster.jpg")`, `url("../images/pumpkin.jpg")`, `url("../images/baby.jpg")`]
 
-  // Creates a node list of all game squares (36 total)
+  // Creates a node list of all game squares (25 total)
   let squares = document.querySelectorAll(".square")
   // Creates an object for the "SMASH!" (go) button
   let goBtn = document.querySelector(".goBtn")
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // Returns a random # within my range of game squares available
   function randomNum() {
-    let result = Math.floor(Math.random() * 36)
+    let result = Math.floor(Math.random() * 25)
     return result
   }
 
@@ -143,6 +143,10 @@ document.addEventListener('DOMContentLoaded', function(){
         selected3.style.background = ""
         selected3.style.backgroundColor = "gainsboro"
         selected3.removeEventListener("click", click3)
+
+        if (counter3 === 15) {
+          window.location.href = "https://www.google.com"
+        }
       }, 1200)
 
     }, 3000)
