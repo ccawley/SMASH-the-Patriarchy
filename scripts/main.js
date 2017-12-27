@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function(){
     let counter3 = 0
     let score = 0
     timerDisplay.innerText = 30
-    var punch = document.createElement('audio')
-    punch.setAttribute('src', "punch_or_whack.wav")
+    var punch = document.createElement('audio');
+    punch.setAttribute('src', "punch_or_whack.wav");
 
     loop1 = setInterval(function() {
       counter1++
