@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
   let goodThings = [`url("../images/puffer.jpg")`, `url("../images/scarecrow.jpg")`,  `url("../images/cat.jpg")`, `url("../images/fish.jpg")`, `url("../images/troll.jpg")`, `url("../images/rabbit.jpg")`, `url("../images/lion.jpg")`, `url("../images/pokemon.jpg")`, `url("../images/owl.jpg")`, `url("../images/bird.jpg")`, `url("../images/sloth.jpg")`, `url("../images/corn.jpg")`, `url("../images/dog.jpg")`, `url("../images/puppy.jpg")`, `url("../images/caterpillar.jpg")`, `url("../images/biff.jpg")`, `url("../images/sushi.jpg")`, `url("../images/hampster.jpg")`, `url("../images/pumpkin.jpg")`, `url("../images/baby.jpg")`]
 
+  let goodThings2 = [`url("../images/puffer.jpg")`, `url("../images/scarecrow.jpg")`,  `url("../images/cat.jpg")`, `url("../images/fish.jpg")`, `url("../images/troll.jpg")`, `url("../images/rabbit.jpg")`, `url("../images/lion.jpg")`, `url("../images/pokemon.jpg")`, `url("../images/owl.jpg")`, `url("../images/bird.jpg")`, `url("../images/sloth.jpg")`, `url("../images/corn.jpg")`, `url("../images/dog.jpg")`, `url("../images/puppy.jpg")`, `url("../images/caterpillar.jpg")`, `url("../images/biff.jpg")`, `url("../images/sushi.jpg")`, `url("../images/hampster.jpg")`, `url("../images/pumpkin.jpg")`, `url("../images/baby.jpg")`]
+
   // Creates a node list of all game squares (25 total)
   let squares = document.querySelectorAll(".square")
   // Creates an object for the "SMASH!" (go) button
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
   let selected1
   let selected2
   let selected3
+  let selected4
 
   // Returns a random # within my range of game squares available
   function randomNum() {
@@ -39,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function(){
   shuffle(patriarch1)
   shuffle(patriarch2)
   shuffle(goodThings)
+  shuffle(goodThings2)
 
   // Selects a random square to be the "active" square for loop1
   function randomSquare1() {
@@ -52,6 +56,10 @@ document.addEventListener('DOMContentLoaded', function(){
   function randomSquare3() {
     selected3 = squares[randomNum()]
   }
+  // Selects a random square to be the "active" square for loop4
+  function randomSquare4() {
+    selected4 = squares[randomNum()]
+  }
 
   alert("If you are on a mobile device, please rotate it to landscape for the best experience. Thank you!")
 
@@ -61,10 +69,13 @@ document.addEventListener('DOMContentLoaded', function(){
     let counter1 = 0
     let counter2 = 0
     let counter3 = 0
+    let counter4 = 0
     let score = 0
     timerDisplay.innerText = 30
-    var punch = document.createElement('audio');
-    punch.setAttribute('src', "punch_or_whack.wav");
+    var punch = document.createElement('audio')
+    punch.setAttribute('src', "punch_or_whack.wav")
+    var no = document.createElement('audio')
+    no.setAttribute('src', "no.wav")
 
     loop1 = setInterval(function() {
       counter1++
@@ -74,11 +85,12 @@ document.addEventListener('DOMContentLoaded', function(){
       }
 
       randomSquare1()
-      if (selected1 === selected2 || selected1 === selected3) {
-        randomSquare1
+      if (selected1 === selected2 || selected1 === selected3 || selected1 === selected4) {
+        randomSquare1()
       }
 
       selected1.style.background = patriarch1[counter1]
+      selected1.style.backgroundSize = "contain"
 
       function click1() {
         punch.play()
@@ -103,12 +115,15 @@ document.addEventListener('DOMContentLoaded', function(){
       }
 
       randomSquare2()
-      if (selected2 === selected1 || selected2 === selected3) {
-        randomSquare2
+      if (selected2 === selected1 || selected2 === selected3 || selected2 === selected4) {
+        randomSquare2()
       }
+
       selected2.style.background = goodThings[counter2]
+      selected2.style.backgroundSize = "contain"
 
       function click2() {
+        no.play()
         score -= 2
         scoreDisplay.innerText = score
       }
@@ -134,10 +149,12 @@ document.addEventListener('DOMContentLoaded', function(){
       }
 
       randomSquare3()
-      if (selected3 === selected1 || selected3 === selected2) {
-        randomSquare3
+      if (selected3 === selected1 || selected3 === selected2 || selected3 === selected4) {
+        randomSquare3()
       }
+
       selected3.style.backgroundColor = patriarch2[counter3]
+      selected3.style.backgroundSize = "contain"
 
       function click3() {
         punch.play()
@@ -154,6 +171,36 @@ document.addEventListener('DOMContentLoaded', function(){
       }, 1200)
 
     }, 3000)
+
+    loop4 = setInterval(function() {
+      counter4++
+      if (counter4 === 20) {
+        clearInterval(loop4)
+      }
+
+      randomSquare4()
+      if (selected4 === selected1 || selected4 === selected2 || selected4 === selected3) {
+        randomSquare4()
+      }
+
+      selected4.style.background = goodThings2[counter4]
+      selected4.style.backgroundSize = "contain"
+
+      function click4() {
+        no.play()
+        score -= 2
+        scoreDisplay.innerText = score
+      }
+
+      selected4.addEventListener("click", click4)
+
+      clearSquare = setTimeout(function() {
+        selected4.style.background = ""
+        selected4.style.backgroundColor = "gainsboro"
+        selected4.removeEventListener("click", click4)
+      }, 1200)
+
+    }, 2000)
 
   })
 

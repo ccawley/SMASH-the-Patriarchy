@@ -7,7 +7,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
-  height: 100vh;
 }
 
 html {
@@ -36,9 +35,11 @@ h1 {
 
 .background {
   background-color: white;
+  border: solid 3px gainsboro;
   border-radius: 5px;
   opacity: .9;
   padding: 10px;
+  text-align: center;
 }
 
 p {
@@ -57,16 +58,17 @@ p {
 
 @media (max-width: 600px) {
  h1 {
-   font-size: 5em;
+   font-size: 3.3em;
    margin-bottom: 15px;
  }
 
  .buttons {
-   margin-top: 40px;
+   margin-top: 120px;
  }
 
  .background {
-   margin: 5px;
+   margin: 25px;
+   margin-bottom: 5px;
  }
 
  .btn-primary {
