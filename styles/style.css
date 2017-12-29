@@ -95,8 +95,12 @@ p {
     margin-bottom: 5px;
   }
 
+  .display {
+    font-size: 1.2
+  }
+
  .square {
-   height: 70px;
-   width: 70px;
+   height: 60px;
+   width: 60px;
  }
 }

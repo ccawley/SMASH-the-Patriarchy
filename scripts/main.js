@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function(){
         selected1.style.background = ""
         selected1.style.backgroundColor = "gainsboro"
         selected1.removeEventListener('click', click1)
-      }, 1200)
+      }, 1450)
 
     }, 1500)
 
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function(){
         selected2.style.background = ""
         selected2.style.backgroundColor = "gainsboro"
         selected2.removeEventListener("click", click2)
-      }, 1200)
+      }, 1500)
 
     }, 2000)
 
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function(){
         selected3.style.background = ""
         selected3.style.backgroundColor = "gainsboro"
         selected3.removeEventListener("click", click3)
-      }, 1200)
+      }, 1500)
 
     }, 3000)
 
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function(){
         selected4.style.background = ""
         selected4.style.backgroundColor = "gainsboro"
         selected4.removeEventListener("click", click4)
-      }, 1200)
+      }, 1500)
 
     }, 2000)
 
