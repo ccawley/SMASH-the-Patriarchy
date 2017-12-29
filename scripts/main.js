@@ -101,9 +101,9 @@ document.addEventListener('DOMContentLoaded', function(){
       selected1.addEventListener("click", click1)
 
       clearSquare = setTimeout(function() {
-        selected1.removeEventListener('click', click1)
         selected1.style.backgroundColor = "gainsboro"
         selected1.style.background = ""
+        selected1.removeEventListener('click', click1)
       }, 1450)
 
     }, 1500)
@@ -131,9 +131,9 @@ document.addEventListener('DOMContentLoaded', function(){
       selected2.addEventListener("click", click2)
 
       clearSquare = setTimeout(function() {
-        selected2.removeEventListener("click", click2)
         selected2.style.backgroundColor = "gainsboro"
         selected2.style.background = ""
+        selected2.removeEventListener("click", click2)
       }, 1500)
 
     }, 2000)
@@ -165,9 +165,9 @@ document.addEventListener('DOMContentLoaded', function(){
       selected3.addEventListener("click", click3)
 
       clearSquare = setTimeout(function() {
-        selected3.removeEventListener("click", click3)
         selected3.style.backgroundColor = "gainsboro"
         selected3.style.background = ""
+        selected3.removeEventListener("click", click3)
       }, 1500)
 
     }, 3000)
@@ -195,9 +195,9 @@ document.addEventListener('DOMContentLoaded', function(){
       selected4.addEventListener("click", click4)
 
       clearSquare = setTimeout(function() {
-        selected4.removeEventListener("click", click4)
         selected4.style.backgroundColor = "gainsboro"
         selected4.style.background = ""
+        selected4.removeEventListener("click", click4)
       }, 1500)
 
     }, 2000)
