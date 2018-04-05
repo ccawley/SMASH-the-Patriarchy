@@ -2,7 +2,7 @@
 
 SMASH! the Patriarchy is a mobile friendly "game" with a message. The goal is to boost the voices of the courageous women of the #metoo movement while raising money for local & national charities that serve victims of sexual harassment & abuse.
 
-### Deployed here: http://smash-the-patriarchy.surge.sh/
+### Deployed here: http://smashthepatriarchy.surge.sh/
 #### GitHub repository: https://github.com/ccawley/SMASH-the-Patriarchy
 
 ## Features
@@ -21,7 +21,7 @@ SMASH! the Patriarchy is a mobile friendly "game" with a message. The goal is to
 ## Screenshots
 
 ### Splash page:
-![Splash Page](screenshots/smash-the-patriarchy-splash)
+![Splash Page](screenshots/smash-the-patriarchy-splash.png)
 
 ### Main game page:
 ![Game Page](screenshots/smash-the-patriarchy-game.png)
